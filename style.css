@@ -12,9 +12,13 @@
   box-sizing: border-box;
 }
 
+html {
+  min-height: 100%;
+}
+
 body {
   padding: 10%;
-  min-height: 100vh;
+  min-height: 100%;
   font-family:  -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
   font-size: var(--font-size--default);
 
@@ -22,18 +26,22 @@ body {
 
 h1 {
   padding-bottom: 2%;
-  color: rgb(25, 25, 25);
+  color: rgb(101,112,139);
   letter-spacing: 0.2px;
 }
 
-a {
+p {
+  padding: 10px;
+}
+
+p a {
   position: relative;
   font-weight: 500;
   color: rgba(44, 85, 221, 0.9);
   text-decoration: none;
 }
 
-a:before {
+p a:before {
   content: "";
   position: absolute;
   width: 0;
@@ -45,7 +53,18 @@ a:before {
   transition: all 0.3s ease-in;
 }
 
-a:hover:before {
+p a:hover:before {
   visibility: visible;
   width: 100%;
+}
+
+footer {
+  width: 100%;
+  margin-top: 50px;
+}
+
+footer a {
+  color: grey;
+  float: right;
+
 }
